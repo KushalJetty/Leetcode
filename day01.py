@@ -1,6 +1,7 @@
 # two sum problem
 
 class Solution(object):
+    # Two Sum
     def twoSum(self, nums, target):
         """
         :type nums: List[int]
@@ -36,6 +37,7 @@ s.twoSum(nums3 ,target3)
 # length of the last word
 
 class Solution(object):
+    # Length of the last word
     def lengthOfLastWord(self, s):
         """
         :type s: str
