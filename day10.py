@@ -16,7 +16,6 @@ class Solution(object):
                 tail.next, list2 = list2, list2.next
             tail = tail.next
 
-        # Attach whichever list is not empty
         tail.next = list1 or list2
 
         return dummy.next
@@ -24,7 +23,6 @@ class Solution(object):
         if not list1: return list2
         if not list2: return list1
 
-        # Pick the smaller head as the start
         if list1.val < list2.val:
             head = tail = list1
             list1 = list1.next
@@ -32,7 +30,6 @@ class Solution(object):
             head = tail = list2
             list2 = list2.next
 
-        # Merge by re-linking nodes directly
         while list1 and list2:
             if list1.val < list2.val:
                 tail.next = list1
@@ -42,7 +39,6 @@ class Solution(object):
                 list2 = list2.next
             tail = tail.next
 
-        # Attach the remainder
         tail.next = list1 if list1 else list2
         return head
 
